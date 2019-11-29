@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* 
+    Author: Leonardo Zambão
+    URL: www.chleba.net
+    Version: 1.0
+    Date: 2019 - 11 - 28
+*/
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*::before, *::after { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+a { color: inherit; }
+
+a:hover { text-decoration: underline; }
+
+section, header, footer, article, figure, figcaption { display: block; }
+
+.absolute { position: absolute; top: 0; left: 0; }
+
+.full { width: 100%; }
+
+.col-02 { width: 50%; }
+
+.col-03 { width: 33.3%; }
+
+.col-04 { width: 25%; }
+
+.col-05 { width: 20%; }
+
+.flex { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.between { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.around { -ms-flex-pack: distribute; justify-content: space-around; }
+
+.center { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.wrap { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.column { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.align-center { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.align-end { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+
+.text-center { text-align: center; }
+
+.text-right { text-align: right; }
+
+.text-left { text-align: left; }
+
+input[type="button"], input[type="submit"], button { cursor: pointer; outline: none; }
+
+input, button, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; resize: none; }
+
+.animated { -webkit-transition: all 400ms ease-in-out; transition: all 400ms ease-in-out; }
+
+@media only screen and (min-width: 769px) { .only-mobile { display: none; } }
+
+@media only screen and (max-width: 768px) { .only-desktop { display: none; }
+  .flex { -ms-flex-wrap: wrap; flex-wrap: wrap; } }
+/*# sourceMappingURL=chlebalize.css.map */

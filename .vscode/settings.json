@@ -1,0 +1,14 @@
+{
+    "liveSassCompile.settings.formats":[
+        {
+            "format": "compact",
+            "extensionName": ".css",
+            "savePath": "/css"
+        },
+        {
+            "extensionName": ".min.css",
+            "format": "compressed",
+            "savePath": "/css"
+        }
+    ]
+}

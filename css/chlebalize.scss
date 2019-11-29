@@ -1,0 +1,102 @@
+/* 
+    Author: Leonardo Zambão
+    URL: www.chleba.net
+    Version: 1.0
+    Date: 2019 - 11 - 28
+*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+*::before,
+*::after{box-sizing: border-box;}
+a{
+    color: inherit;
+}
+a:hover{
+    text-decoration: underline;
+}
+section,header,footer,article,figure,figcaption{
+    display: block;
+}
+.absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.full{
+    width: 100%;
+}
+.col-02{
+    width: 50%;
+}
+.col-03{
+    width: 33.3%;
+}
+.col-04{
+    width: 25%;
+}
+.col-05{
+    width: 20%;
+}
+.flex{
+    display: flex;
+}
+.between{
+    justify-content: space-between;
+}
+.around{
+    justify-content: space-around;
+}
+.center{
+    justify-content: center;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.column{
+    flex-direction: column;
+}
+.align-center{
+    align-items: center;
+}
+.align-end{
+    align-items: flex-end;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+input[type="button"],
+input[type="submit"],
+button{
+    cursor: pointer;outline: none;
+}
+input, button, textarea{
+    appearance: none;resize: none;
+}
+.animated{
+    transition: all 400ms ease-in-out;
+}
+
+@media only screen and (min-width: 769px){
+    .only-mobile{
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px){
+    .only-desktop{
+        display: none;
+    }
+    .flex{
+        flex-wrap: wrap;
+    }
+}
