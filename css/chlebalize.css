@@ -75,6 +75,8 @@ input::placeholder, textarea::placeholder { font-family: inherit; color: inherit
 
 .hide { display: none; }
 
+.container { width: 100%; padding: 0 15px; max-width: 1100px; margin: 0 auto; }
+
 .menu-button { position: relative; width: 40px; height: 35px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-transition: all 400ms ease-in-out; transition: all 400ms ease-in-out; }
 
 .menu-button span { display: block; background-color: #fff; width: 100%; height: 3px; position: relative; -webkit-transition: all 400ms ease-in-out; transition: all 400ms ease-in-out; }
@@ -134,6 +136,10 @@ input::placeholder, textarea::placeholder { font-family: inherit; color: inherit
     transform: translate(19px, 0); } }
 
 @media only screen and (min-width: 769px) { .only-mobile { display: none; } }
+
+@media only screen and (max-width: 1180px) { .container { max-width: 960px; } }
+
+@media only screen and (max-width: 768px) { .container { max-width: 720px; } }
 
 @media only screen and (max-width: 768px) { .only-desktop { display: none; }
   .flex { -ms-flex-wrap: wrap; flex-wrap: wrap; } }
