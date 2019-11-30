@@ -108,6 +108,12 @@ textarea::placeholder{font-family: inherit;color: inherit;}
 .hide{
     display: none;
 }
+.container{
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 .menu-button{
     position: relative;
     width: 40px;
@@ -218,6 +224,16 @@ textarea::placeholder{font-family: inherit;color: inherit;}
 @media only screen and (min-width: 769px){
     .only-mobile{
         display: none;
+    }
+}
+@media only screen and (max-width: 1180px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .container{
+        max-width: 720px;
     }
 }
 @media only screen and (max-width: 768px){
