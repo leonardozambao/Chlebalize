@@ -51,6 +51,77 @@ $(window).scroll(function (e) {
     divSelect(scroll);
 });
 
+function changeValue(e) {
+    $('.state-two [class*="parallax"]').each(function () {
+        var target = $(this);
+        var cssSelector = '';
+        var increment;
+        var decrement;
+        var unity = 'px';
+        var limit = 60;
+        var velocity = 2;
+        var thisHeight = '';
+
+        if ($(target).hasClass('half-limit')) {
+            limit = limit / 2;
+        }
+        if ($(target).hasClass('double-velocity')) {
+            velocity = velocity * 2;
+        }
+        if ($(target).hasClass('half-velocity')) {
+            velocity = velocity / 2;
+        }
+        if ($(target).hasClass('double-limit')) {
+            limit = limit * 2;
+        }
+        if ($(target).hasClass('parallax-simple')) {
+            cssSelector = 'top';
+        }
+        if ($(target).hasClass('parallax-background')) {
+            cssSelector = 'background-position-y';
+        }
+        if ($(target).hasClass('parallax-horizontal')) {
+            if ($(target).hasClass('from-right')) {
+                cssSelector = 'right';
+            } else {
+                cssSelector = 'left';
+            }
+        }
+        //pega valor atual para incrementar posteriormente
+        var currentValue = parseFloat($(target).css(cssSelector));
+        if (!currentValue) {
+            currentValue = 0;
+        }
+
+        if (currentValue > - limit) {
+            var decrement = (currentValue - velocity);
+        }
+        if (currentValue < limit) {
+            var increment = (currentValue + velocity);
+        }
+        if (e == 'down') {
+            if ($(target).hasClass('reverse')) {
+                $(target).css(cssSelector, decrement + unity);
+            } else {
+                $(target).css(cssSelector, increment + unity);
+            }
+        } else {
+            if ($(target).hasClass('reverse')) {
+                $(target).css(cssSelector, increment + unity);
+            } else {
+                $(target).css(cssSelector, decrement + unity);
+            }
+        }
+    })
+}
+function changeState(e, eClass) {
+    if ($(e).hasClass(eClass)) {
+        return false;
+    } else {
+        $('section').removeClass(eClass);
+        $(e).addClass(eClass);
+    }
+}
 $(document).ready(function(){
     //menu sandwich
     $('.menu-button').on('click', function(){
