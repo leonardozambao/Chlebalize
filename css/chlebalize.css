@@ -5,11 +5,13 @@
     Version: 1.0
     Date: 2019 - 11 - 28
 */
-* { margin: 0; padding: 0; list-style: none; text-decoration: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { margin: 0; padding: 0; list-style: none; list-style-position: inside; text-decoration: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-*::before, *::after { -webkit-box-sizing: border-box; box-sizing: border-box; }
+*::before, *::after { -webkit-box-sizing: border-box; box-sizing: border-box; display: block; }
 
-html { scroll-behavior: smooth; /* doesn't work on every browser */ font-size: 62.5%; font-family: sans-serif; }
+@supports (scroll-behavior: smooth) { html { scroll-behavior: smooth; } }
+
+html { font-size: 62.5%; font-family: sans-serif; }
 
 a { color: inherit; }
 
@@ -29,6 +31,8 @@ section, header, footer, article, figure, figcaption, aside, nav { display: bloc
 
 .absolute { position: absolute; top: 0; left: 0; }
 
+.reset { all: initial; }
+
 .full { width: 100%; }
 
 .col-02 { width: 50%; }
@@ -45,6 +49,10 @@ section, header, footer, article, figure, figcaption, aside, nav { display: bloc
 
 .flex-around { -ms-flex-pack: distribute; justify-content: space-around; }
 
+.flex-evenly { -ms-flex-pack: distribute; justify-content: space-around; }
+
+@supports (justify-content: space-evenly) { .flex-evenly { -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; } }
+
 .flex-center { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 .flex-wrap { -ms-flex-wrap: wrap; flex-wrap: wrap; }
@@ -56,6 +64,8 @@ section, header, footer, article, figure, figcaption, aside, nav { display: bloc
 .flex-align-start { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
 
 .flex-align-end { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+
+.flexslider, .flexslider [class*="flex"] { display: block; }
 
 .text-center { text-align: center; }
 
@@ -139,6 +149,12 @@ input::placeholder, textarea::placeholder { font-family: inherit; color: inherit
   100% { -webkit-transform: translate(19px, 0);
     transform: translate(19px, 0); } }
 
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0turn); transform: rotate(0turn); }
+  100% { -webkit-transform: rotate(4turn); transform: rotate(4turn); } }
+
+@keyframes spin { 0% { -webkit-transform: rotate(0turn); transform: rotate(0turn); }
+  100% { -webkit-transform: rotate(4turn); transform: rotate(4turn); } }
+
 @media only screen and (min-width: 769px) { .only-mobile { display: none; } }
 
 @media only screen and (max-width: 1180px) { .container { max-width: 960px; } }
@@ -146,5 +162,5 @@ input::placeholder, textarea::placeholder { font-family: inherit; color: inherit
 @media only screen and (max-width: 768px) { .container { max-width: 720px; } }
 
 @media only screen and (max-width: 768px) { .only-desktop { display: none; }
-  .flex { -ms-flex-wrap: wrap; flex-wrap: wrap; } }
+  [class*="flex"] { -ms-flex-wrap: wrap; flex-wrap: wrap; } }
 /*# sourceMappingURL=chlebalize.css.map */

@@ -4,17 +4,30 @@
     Version: 1.0
     Date: 2019 - 11 - 28
 */
+@mixin square($size){
+    width: $size;
+    height: $size;
+}
+@mixin centerAuto(){
+    margin-left: auto;
+    margin-right: auto;
+}
 *{
     margin: 0;
     padding: 0;
     list-style: none;
+    list-style-position: inside;
     text-decoration: none;
     box-sizing: border-box;
 }
 *::before,
-*::after{box-sizing: border-box;}
+*::after{box-sizing: border-box;display: block;}
+@supports (scroll-behavior: smooth) {
+    html{
+        scroll-behavior: smooth;
+    }
+}
 html{
-    scroll-behavior: smooth; /* doesn't work on every browser */
     font-size: 62.5%;
     font-family: sans-serif;
 }
@@ -48,6 +61,9 @@ section,header,footer,article,figure,figcaption,aside,nav{
     top: 0;
     left: 0;
 }
+.reset{
+    all: initial;
+}
 .full{
     width: 100%;
 }
@@ -72,6 +88,14 @@ section,header,footer,article,figure,figcaption,aside,nav{
 .flex-around{
     justify-content: space-around;
 }
+.flex-evenly{
+    justify-content: space-around;
+}
+@supports (justify-content: space-evenly) {
+    .flex-evenly{
+        justify-content: space-evenly;
+    }
+}
 .flex-center{
     justify-content: center;
 }
@@ -89,6 +113,10 @@ section,header,footer,article,figure,figcaption,aside,nav{
 }
 .flex-align-end{
     align-items: flex-end;
+}
+.flexslider,
+.flexslider [class*="flex"]{
+    display: block;
 }
 .text-center{
     text-align: center;
@@ -239,8 +267,14 @@ textarea::placeholder{font-family: inherit;color: inherit;}
     transform: translate(19px, 0);
   }
 }
-
-
+@keyframes spin {
+    0% {
+      transform: rotate(0turn);
+    }
+    100% {
+      transform: rotate(4turn);
+    }
+  }
 @media only screen and (min-width: 769px){
     .only-mobile{
         display: none;
@@ -260,7 +294,7 @@ textarea::placeholder{font-family: inherit;color: inherit;}
     .only-desktop{
         display: none;
     }
-    .flex{
+    [class*="flex"]{
         flex-wrap: wrap;
     }
 }
