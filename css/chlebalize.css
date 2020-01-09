@@ -4,6 +4,7 @@
     URL: www.chleba.net
     Version: 1.0
     Date: 2019 - 11 - 28
+    !Important: alterar apenas o arquivo com extenção .scss
 */
 * { margin: 0; padding: 0; list-style: none; list-style-position: inside; text-decoration: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -15,7 +16,7 @@ html { font-size: 62.5%; font-family: sans-serif; }
 
 a { color: inherit; }
 
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: none; }
 
 a, p, span, font, figcaption { font-size: 1.6rem; }
 

@@ -3,6 +3,7 @@
     URL: www.chleba.net
     Version: 1.0
     Date: 2019 - 11 - 28
+    !Important: alterar apenas o arquivo com extenção .scss
 */
 @mixin square($size){
     width: $size;
@@ -20,7 +21,7 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-*::before,
+*::before, 
 *::after{box-sizing: border-box;display: block;}
 @supports (scroll-behavior: smooth) {
     html{
@@ -35,7 +36,7 @@ a{
     color: inherit;
 }
 a:hover{
-    text-decoration: underline;
+    text-decoration: none;
 }
 a,p,span,font,figcaption{
     font-size: 1.6rem;
