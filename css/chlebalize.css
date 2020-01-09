@@ -1,18 +1,10 @@
-@charset "UTF-8";
-/* 
-    Author: Leonardo Zambão
-    URL: www.chleba.net
-    Version: 1.2
-    Date: 2020 - 01 - 09
-    !Important: alterar apenas o arquivo com extenção .scss
-*/
 * { margin: 0; padding: 0; list-style: none; list-style-position: inside; text-decoration: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 *::before, *::after { -webkit-box-sizing: border-box; box-sizing: border-box; display: block; }
 
 @supports (scroll-behavior: smooth) { html { scroll-behavior: smooth; } }
 
-html { font-size: 62.5%; font-family: sans-serif; }
+html { font-size: 10px; font-family: sans-serif; }
 
 a { color: inherit; }
 

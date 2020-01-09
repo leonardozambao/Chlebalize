@@ -1,10 +1,6 @@
-/* 
-    Author: Leonardo Zambão
-    URL: www.chleba.net
-    Version: 1.2
-    Date: 2020 - 01 - 09
-    !Important: alterar apenas o arquivo com extenção .scss
-*/
+//Variaveis
+$font-size: 10px;
+
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }
@@ -30,11 +26,6 @@
   }
 }
 
-$min_width: 320px;
-$max_width: 1000px;
-$min_font: 16px;
-$max_font: 32px;
-
 @mixin square($size){
     width: $size;
     height: $size;
@@ -51,18 +42,19 @@ $max_font: 32px;
     text-decoration: none;
     box-sizing: border-box;
 }
-*::before, 
+*::before,
 *::after{box-sizing: border-box;display: block;}
 @supports (scroll-behavior: smooth) {
     html{
         scroll-behavior: smooth;
     }
-}
-html{ 
-    font-size: 62.5%; 
+} 
+html{
+    // font-size: 62.5%;
     // @include font-responsive($min_width, $max_width, $min_font, $max_font);
+    font-size: $font-size;
     font-family: sans-serif;
-}
+} 
 a{
     color: inherit;
 }
