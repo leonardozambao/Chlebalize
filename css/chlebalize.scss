@@ -157,11 +157,11 @@ button{
     cursor: pointer;outline: none;
 }
 input, button, textarea{
-    appearance: none;resize: none;
+    appearance: none;resize: none;outline: none;
 }
 input::placeholder,
 textarea::placeholder{font-family: inherit;color: inherit;}
-.animated{
+.animate{
     transition: all 400ms ease-in-out;
 }
 .hide{
@@ -173,7 +173,7 @@ textarea::placeholder{font-family: inherit;color: inherit;}
     max-width: 1100px;
     margin: 0 auto;
 }
-.menu-button{
+.menu-button{  
     position: relative;
     width: 40px;
     height: 35px; 
@@ -299,26 +299,24 @@ textarea::placeholder{font-family: inherit;color: inherit;}
       transform: rotate(4turn);
     }
   }
-@media only screen and (min-width: 769px){
+@media screen and (min-width: 861px){
     .only-mobile{
         display: none;
     }
 }
-@media only screen and (max-width: 1180px){
+@media screen and (max-width: 1180px){
     .container{
         max-width: 960px;
     }
 }
-@media only screen and (max-width: 768px){
-    .container{
-        max-width: 720px;
-    }
-}
-@media only screen and (max-width: 768px){
+@media screen and (max-width: 860px){
     .only-desktop{
         display: none;
     }
     [class*="flex"]{
         flex-wrap: wrap;
+    }
+    .container{
+        max-width: 720px;
     }
 }

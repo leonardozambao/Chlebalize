@@ -68,7 +68,7 @@ section, header, footer, article, figure, figcaption, aside, nav { display: bloc
 
 input[type="button"], input[type="submit"], button { cursor: pointer; outline: none; }
 
-input, button, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; resize: none; }
+input, button, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; resize: none; outline: none; }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { font-family: inherit; color: inherit; }
 
@@ -78,7 +78,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { font-family: inh
 
 input::placeholder, textarea::placeholder { font-family: inherit; color: inherit; }
 
-.animated { -webkit-transition: all 400ms ease-in-out; transition: all 400ms ease-in-out; }
+.animate { -webkit-transition: all 400ms ease-in-out; transition: all 400ms ease-in-out; }
 
 .hide { display: none; }
 
@@ -148,12 +148,11 @@ input::placeholder, textarea::placeholder { font-family: inherit; color: inherit
 @keyframes spin { 0% { -webkit-transform: rotate(0turn); transform: rotate(0turn); }
   100% { -webkit-transform: rotate(4turn); transform: rotate(4turn); } }
 
-@media only screen and (min-width: 769px) { .only-mobile { display: none; } }
+@media screen and (min-width: 861px) { .only-mobile { display: none; } }
 
-@media only screen and (max-width: 1180px) { .container { max-width: 960px; } }
+@media screen and (max-width: 1180px) { .container { max-width: 960px; } }
 
-@media only screen and (max-width: 768px) { .container { max-width: 720px; } }
-
-@media only screen and (max-width: 768px) { .only-desktop { display: none; }
-  [class*="flex"] { -ms-flex-wrap: wrap; flex-wrap: wrap; } }
+@media screen and (max-width: 860px) { .only-desktop { display: none; }
+  [class*="flex"] { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .container { max-width: 720px; } }
 /*# sourceMappingURL=chlebalize.css.map */
