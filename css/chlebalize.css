@@ -1,3 +1,10 @@
+@charset "UTF-8";
+/* 
+    Author: Leonardo Zambão
+    URL: https://github.com/leonardozambao
+    Version: 1.2
+    Date: 2020 - 03 - 04
+*/
 * { margin: 0; padding: 0; list-style: none; list-style-position: inside; text-decoration: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 *::before, *::after { -webkit-box-sizing: border-box; box-sizing: border-box; display: block; }
@@ -5,6 +12,8 @@
 @supports (scroll-behavior: smooth) { html { scroll-behavior: smooth; } }
 
 html { font-size: 10px; font-family: sans-serif; }
+
+body { overflow-x: hidden; }
 
 a { color: inherit; }
 
@@ -67,6 +76,8 @@ section, header, footer, article, figure, figcaption, aside, nav { display: bloc
 .text-left { text-align: left; }
 
 input[type="button"], input[type="submit"], button { cursor: pointer; outline: none; }
+
+button { font-family: inherit; border: 0; }
 
 input, button, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; resize: none; outline: none; }
 
