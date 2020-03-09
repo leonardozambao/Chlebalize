@@ -122,15 +122,8 @@ function changeState(e, eClass) {
         $(e).addClass(eClass);
     }
 }
-$(document).ready(function(){
-    //menu sandwich
-    $('.menu-button').on('click', function(){
-        $('header').toggleClass('menu-opened');
-        $(this).toggleClass('menu-opened');
-        return false;
-    });
 
-    // extract .svg file in the html
+function extractSvg(){
     jQuery('.svg').each(function () {
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -173,6 +166,18 @@ $(document).ready(function(){
         }, 'xml');
 
     });
+}
+
+$(document).ready(function(){
+    //menu sandwich
+    $('.menu-button').on('click', function(){
+        $('header').toggleClass('menu-opened');
+        $(this).toggleClass('menu-opened');
+        return false;
+    });
+
+    // extract .svg file in the html
+    extractSvg();
 
 });
 
