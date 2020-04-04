@@ -77,9 +77,9 @@ section, header, footer, article, figure, figcaption, aside, nav { display: bloc
 
 input[type="button"], input[type="submit"], button { cursor: pointer; outline: none; }
 
-button { font-family: inherit; border: 0; }
+button { border: 0; }
 
-input, button, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; resize: none; outline: none; }
+input:not([type="checkbox"]):not([type="radio"]), button, textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; resize: none; outline: none; font-family: inherit; }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { font-family: inherit; color: inherit; }
 
@@ -123,6 +123,16 @@ input::placeholder, textarea::placeholder { font-family: inherit; color: inherit
 
 .loading-box .lds-ellipsis div:nth-child(4) { left: 45px; -webkit-animation: lds-ellipsis3 0.6s infinite; animation: lds-ellipsis3 0.6s infinite; }
 
+.has-image-fixed { position: relative; height: 50vh; overflow: hidden; }
+
+.has-image-fixed .image-clip { clip: rect(0, 100vw, 50vh, 0); position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.has-image-fixed .image-clip .image-fixed { position: fixed; top: -30px; left: 0; width: 100vw; height: calc(100% + 90px); -o-object-fit: cover; object-fit: cover; }
+
+.lightbox { display: none; z-index: 5; position: fixed; background-color: rgba(0, 0, 0, 0.5); top: 0; left: 0; width: 100vw; height: 100vh; }
+
+.lightbox .content { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background-color: #fff; overflow: auto; }
+
 @-webkit-keyframes lds-ellipsis1 { 0% { -webkit-transform: scale(0);
     transform: scale(0); }
   100% { -webkit-transform: scale(1);
@@ -161,9 +171,40 @@ input::placeholder, textarea::placeholder { font-family: inherit; color: inherit
 
 @media screen and (min-width: 861px) { .only-mobile { display: none; } }
 
+@-webkit-keyframes jump { 0% { -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  20% { -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  40% { -webkit-transform: translateY(-14px);
+    transform: translateY(-14px); }
+  50% { -webkit-transform: translateY(10px);
+    transform: translateY(10px); }
+  60% { -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  80% { -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% { -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
+@keyframes jump { 0% { -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  20% { -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  40% { -webkit-transform: translateY(-14px);
+    transform: translateY(-14px); }
+  50% { -webkit-transform: translateY(10px);
+    transform: translateY(10px); }
+  60% { -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  80% { -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  100% { -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+
 @media screen and (max-width: 1180px) { .container { max-width: 960px; } }
 
 @media screen and (max-width: 860px) { .only-desktop { display: none; }
-  [class*="flex"] { -ms-flex-wrap: wrap; flex-wrap: wrap; }
-  .container { max-width: 720px; } }
+  [class*="flex"]:not(.no-wrap) { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .container { max-width: 720px; }
+  .mob-column { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; } }
 /*# sourceMappingURL=chlebalize.css.map */
