@@ -168,6 +168,11 @@ function extractSvg(){
     });
 }
 
+function returnTop(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+}
+
 $(document).ready(function(){
     //menu sandwich
     $('.menu-button').on('click', function(){
