@@ -186,6 +186,26 @@ $(document).ready(function(){
 
 });
 
+function scrollToElement(e, speed, container, margin) {
+	var speed = speed != '' ? speed : 3000;
+	var container = container != '' ? container : 'html,body';
+	var $target = $(e);
+	margin = margin != '' ? margin : 0;
+	$(container).animate(
+		{
+			scrollTop: $target.offset().top - margin
+		}, {
+		duration: speed,
+		step: function (now, fx) {
+			var newOffset = $target.offset().top - margin;
+			if (fx.end !== newOffset)
+				fx.end = newOffset;
+		}
+	}
+	);
+	return false;
+}
+
 $(window).on('load',function () {
     $('.loading-box').fadeOut(400);
 })
