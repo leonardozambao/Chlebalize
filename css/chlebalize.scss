@@ -53,12 +53,6 @@
         display: block;
     }
     
-    @supports (scroll-behavior: smooth) {
-        html {
-            scroll-behavior: smooth;
-        }
-    }
-    
     html {
         // font-size: 62.5%;
         // @include font-responsive($min_width, $max_width, $min_font, $max_font);
@@ -78,6 +72,8 @@
         text-decoration: none;
     }
     
+    li,
+    div,
     a,
     p,
     span,
@@ -190,6 +186,12 @@
     
     .flex-align-end {
         align-items: flex-end;
+    }
+    .flex-end{
+        justify-content: flex-end;
+    }
+    .fx-auto{
+        flex: 1 1 auto;
     }
     
     .flexslider,
@@ -380,6 +382,10 @@
             background-color: #fff;
             overflow: auto;
         }
+    }
+    .margin-auto{
+        margin-left: auto;
+        margin-right: auto;
     }
     
     @keyframes lds-ellipsis1 {
