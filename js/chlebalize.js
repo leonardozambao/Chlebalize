@@ -35,6 +35,7 @@ function divSelect(scroll) {
         } else {
             $('header').addClass('show').removeClass('no-top');
         }
+		changeValue('down');
     } else {
         //subindo scroll
         if (scroll > $('header').innerHeight()) {
@@ -43,6 +44,7 @@ function divSelect(scroll) {
             $('header').removeClass('no-top');
         }
         $('header').addClass('show')
+		changeValue('up');
     }
     lastScrollTop = scroll;
 };
