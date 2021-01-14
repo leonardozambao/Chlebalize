@@ -2,14 +2,16 @@
 /* 
     Author: Leonardo Zambão
     URL: https://github.com/leonardozambao
-    Version: 1.2
-    Date: 2020 - 03 - 04
+    Version: 1.3
+    Date: 2021 - 01 - 14
 */
-* { margin: 0; padding: 0; list-style: none; list-style-position: inside; text-decoration: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
+ul[class], ol[class] { list-style: none; }
+
+* { margin: 0; padding: 0; text-decoration: none; -webkit-box-sizing: border-box; box-sizing: border-box; list-style-position: inside; }
 
 *::before, *::after { -webkit-box-sizing: border-box; box-sizing: border-box; display: block; }
 
-html { font-size: 10px; font-family: sans-serif; }
+html { font-size: 62.5%; font-family: sans-serif; }
 
 body { overflow-x: hidden; }
 
@@ -42,6 +44,10 @@ section, header, footer, article, figure, figcaption, aside, nav { display: bloc
 .col-04 { width: 25%; }
 
 .col-05 { width: 20%; }
+
+.upper { text-transform: uppercase; }
+
+.lower { text-transform: lowercase; }
 
 [class*="flex"] { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -97,7 +103,7 @@ input::placeholder, textarea::placeholder { font-family: inherit; color: inherit
 
 .container { width: 100%; padding: 0 15px; max-width: 1100px; margin: 0 auto; }
 
-.menu-button { position: relative; width: 40px; height: 35px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-transition: all 400ms ease-in-out; transition: all 400ms ease-in-out; }
+.menu-button { background-color: transparent; position: relative; width: 40px; height: 35px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-transition: all 400ms ease-in-out; transition: all 400ms ease-in-out; }
 
 .menu-button span { display: block; background-color: #fff; width: 100%; height: 3px; position: relative; -webkit-transition: all 400ms ease-in-out; transition: all 400ms ease-in-out; }
 
@@ -131,7 +137,11 @@ input::placeholder, textarea::placeholder { font-family: inherit; color: inherit
 
 .has-image-fixed .image-clip .image-fixed { position: fixed; top: -30px; left: 0; width: 100vw; height: calc(100% + 90px); -o-object-fit: cover; object-fit: cover; }
 
-.lightbox { display: none; z-index: 5; position: fixed; background-color: rgba(0, 0, 0, 0.5); top: 0; left: 0; width: 100vw; height: 100vh; }
+.lightbox { display: none; z-index: 5; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; }
+
+.lightbox--has_loader { background: url("../images/loader.gif") no-repeat center center/50px; }
+
+.lightbox_background { background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 .lightbox .content { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background-color: #fff; overflow: auto; }
 
