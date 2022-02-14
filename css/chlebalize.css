@@ -220,5 +220,7 @@ input::placeholder, textarea::placeholder { font-family: inherit; color: inherit
 @media screen and (max-width: 860px) { .only-desktop { display: none; }
   [class*="flex"]:not(.no-wrap) { -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .container { max-width: 720px; }
-  .mob-column { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; } }
+  .mob-column { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; }
+  .mob-column-reverse { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-flow: column-reverse; flex-flow: column-reverse; }
+  .mob-flex { display: -webkit-box; display: -ms-flexbox; display: flex; } }
 /*# sourceMappingURL=chlebalize.css.map */

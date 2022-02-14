@@ -503,4 +503,10 @@
         .mob-column {
             flex-flow: column;
         }
+        .mob-column-reverse{
+            flex-flow: column-reverse;
+        }
+        .mob-flex{
+            display: flex;
+        }
     }
